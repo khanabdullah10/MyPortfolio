@@ -4,25 +4,44 @@ import './Hero.css';
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
   const fullText = "Hi — I'm Khan Abdullah, a Java Backend Developer & a Software Trainer.";
 
   useEffect(() => {
-    if (currentIndex < fullText.length) {
+    if (!isDeleting && currentIndex < fullText.length) {
+      // Typing mode
       const timeout = setTimeout(() => {
         setDisplayedText(prev => prev + fullText[currentIndex]);
         setCurrentIndex(prev => prev + 1);
       }, 80); // Typing speed
 
       return () => clearTimeout(timeout);
-    } else {
-      // Mark typing as complete after a short delay
-      const completeTimeout = setTimeout(() => {
-        setIsTyping(false);
-      }, 500);
-      return () => clearTimeout(completeTimeout);
+    } else if (!isDeleting && currentIndex >= fullText.length) {
+      // Finished typing, wait then start deleting
+      const waitTimeout = setTimeout(() => {
+        setIsDeleting(true);
+      }, 2000); // Wait 2 seconds before deleting
+
+      return () => clearTimeout(waitTimeout);
+    } else if (isDeleting && displayedText.length > 0) {
+      // Deleting mode
+      const timeout = setTimeout(() => {
+        setDisplayedText(prev => prev.slice(0, -1));
+        setCurrentIndex(prev => prev - 1);
+      }, 50); // Deleting speed (faster than typing)
+
+      return () => clearTimeout(timeout);
+    } else if (isDeleting && displayedText.length === 0) {
+      // Finished deleting, reset and start typing again
+      const resetTimeout = setTimeout(() => {
+        setIsDeleting(false);
+        setCurrentIndex(0);
+        setDisplayedText('');
+      }, 500); // Brief pause before restarting
+
+      return () => clearTimeout(resetTimeout);
     }
-  }, [currentIndex, fullText]);
+  }, [currentIndex, fullText, isDeleting, displayedText]);
 
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
@@ -58,7 +77,7 @@ const Hero = () => {
         <div className="hero-text">
           <h1>
             {renderText()}
-            {isTyping && <span className="typewriter-cursor">|</span>}
+            <span className="typewriter-cursor">|</span>
           </h1>
           <p>
             I build efficient RESTful services & backend systems using Java, Spring Boot, Hibernate/Servlet and
@@ -72,12 +91,9 @@ const Hero = () => {
               Contact Me
             </a>
             <a 
-              href="#" 
+              href="/khanAbdullah_Resume.pdf" 
               className="btn btn-secondary"
-              onClick={(e) => {
-                e.preventDefault();
-                alert('Please add your resume PDF to download');
-              }}
+              download="khanAbdullah_Resume.pdf"
             >
               Download Resume
             </a>

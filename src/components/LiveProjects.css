@@ -19,8 +19,9 @@
   transition: all 0.4s ease;
   position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  animation: scaleIn 0.8s ease forwards, float 4s ease-in-out infinite;
+  animation: scaleIn 0.8s ease forwards, floatSmooth 5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   opacity: 0;
+  will-change: transform, opacity;
 }
 
 .live-project-card:nth-child(1) {
@@ -32,8 +33,14 @@
 }
 
 body.light-mode .live-project-card {
-  background: var(--card-light);
-  border: 1px solid var(--border-light);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .live-project-card:hover {
+  box-shadow: 0 12px 40px rgba(14, 165, 164, 0.2);
+  border-color: var(--accent-teal);
 }
 
 .live-project-card::before {
@@ -54,10 +61,10 @@ body.light-mode .live-project-card {
 }
 
 .live-project-card:hover {
-  transform: translateY(-15px) rotate(2deg) scale(1.03);
+  animation: scaleIn 0.8s ease forwards, floatSmoothHover 5s cubic-bezier(0.4, 0, 0.6, 1) infinite, glow 2s ease-in-out infinite;
   box-shadow: 0 25px 50px rgba(14, 165, 164, 0.4), 0 0 30px rgba(14, 165, 164, 0.2);
   border-color: var(--accent-teal);
-  animation: glow 2s ease-in-out infinite;
+  opacity: 1 !important;
 }
 
 .project-image-container {
@@ -70,7 +77,8 @@ body.light-mode .live-project-card {
 }
 
 body.light-mode .project-image-container {
-  border-bottom: 2px solid var(--border-light);
+  border-bottom: 2px solid #e2e8f0;
+  background: linear-gradient(135deg, rgba(14, 165, 164, 0.05), rgba(124, 58, 237, 0.05));
 }
 
 .project-image {
@@ -89,7 +97,7 @@ body.light-mode .project-image-container {
 }
 
 body.light-mode .project-image {
-  background: var(--bg-light);
+  background: #f8fafc;
 }
 
 .live-project-card:hover .project-image {
@@ -255,6 +263,19 @@ body.light-mode .image-error {
   transition: all 0.3s ease;
 }
 
+body.light-mode .tech-badge {
+  background: rgba(14, 165, 164, 0.1);
+  border: 1px solid rgba(14, 165, 164, 0.3);
+  color: var(--accent-teal);
+}
+
+body.light-mode .tech-badge:hover {
+  background: var(--accent-teal);
+  color: white;
+  border-color: var(--accent-teal);
+  box-shadow: 0 4px 12px rgba(14, 165, 164, 0.3);
+}
+
 .tech-badge:hover {
   background: var(--accent-teal);
   color: white;
@@ -270,21 +291,130 @@ body.light-mode .image-error {
   text-align: center;
 }
 
+@keyframes floatSmooth {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-6px) translateX(1.5px) rotate(0.5deg);
+  }
+  50% {
+    transform: translateY(-10px) translateX(0px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-6px) translateX(-1.5px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+}
+
+@keyframes floatSmoothHover {
+  0% {
+    transform: translateY(-15px) translateX(0px) rotate(2deg) scale(1.03);
+  }
+  25% {
+    transform: translateY(-21px) translateX(1.5px) rotate(2.5deg) scale(1.03);
+  }
+  50% {
+    transform: translateY(-25px) translateX(0px) rotate(2deg) scale(1.03);
+  }
+  75% {
+    transform: translateY(-21px) translateX(-1.5px) rotate(1.5deg) scale(1.03);
+  }
+  100% {
+    transform: translateY(-15px) translateX(0px) rotate(2deg) scale(1.03);
+  }
+}
+
 @media (max-width: 768px) {
+  .live-projects-section {
+    padding: 3rem 1rem;
+  }
+
   .live-projects-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
   }
 
   .project-image-container {
-    height: 300px;
+    height: 250px;
+  }
+
+  .project-content {
+    padding: 1.5rem;
   }
 
   .project-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .project-features h4 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-features li {
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+  }
+
+  .tech-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
   }
 
   .project-image {
     padding: 0.5rem;
+  }
+
+  .live-badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .live-projects-section {
+    padding: 2rem 1rem;
+  }
+
+  .live-projects-grid {
+    gap: 1.5rem;
+  }
+
+  .project-image-container {
+    height: 200px;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .project-features {
+    margin-bottom: 1rem;
+  }
+
+  .tech-stack {
+    gap: 0.4rem;
+    margin-bottom: 1rem;
   }
 }
 

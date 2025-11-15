@@ -19,8 +19,16 @@
 }
 
 body.light-mode .filter-btn {
-  background: var(--card-light);
-  border: 1px solid var(--border-light);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+body.light-mode .filter-btn:hover,
+body.light-mode .filter-btn.active {
+  background: #f1f5f9;
+  border-color: var(--accent-teal);
+  box-shadow: 0 4px 8px rgba(14, 165, 164, 0.15);
 }
 
 .filter-btn:hover,
@@ -153,8 +161,14 @@ body.light-mode .projects-marquee-container::after {
 }
 
 body.light-mode .project-card {
-  background: var(--card-light);
-  border: 1px solid var(--border-light);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .project-card:hover {
+  box-shadow: 0 12px 32px rgba(14, 165, 164, 0.2);
+  border-color: var(--accent-teal);
 }
 
 .project-card:hover {
@@ -224,8 +238,15 @@ body.light-mode .project-card {
 }
 
 body.light-mode .project-links .repo-link {
-  background: var(--card-light);
-  border: 1px solid var(--border-light);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+body.light-mode .project-links .repo-link:hover {
+  background: #f1f5f9;
+  border-color: var(--accent-teal);
+  box-shadow: 0 4px 8px rgba(14, 165, 164, 0.15);
 }
 
 .project-links .repo-link:hover {

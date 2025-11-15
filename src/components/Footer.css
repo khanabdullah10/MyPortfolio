@@ -12,8 +12,9 @@ footer {
 }
 
 body.light-mode footer {
-  background: var(--card-light);
-  border-top: 1px solid var(--border-light);
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .footer-content {
@@ -84,8 +85,15 @@ body.light-mode footer {
 }
 
 body.light-mode .social-links a {
-  background: var(--card-light);
-  border: 1px solid var(--border-light);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .social-links a:hover {
+  background: #f1f5f9;
+  box-shadow: 0 4px 12px rgba(14, 165, 164, 0.2);
+  border-color: var(--accent-teal);
 }
 
 .social-links a:hover {

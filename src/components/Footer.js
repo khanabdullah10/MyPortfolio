@@ -13,15 +13,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-content">
-        {/* <div className="footer-links">
-          <a href="#home" onClick={(e) => handleNavClick(e, 'home')}>Home</a>
-          <a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a>
-          <a href="#skills" onClick={(e) => handleNavClick(e, 'skills')}>Skills</a>
-          <a href="#live-projects" onClick={(e) => handleNavClick(e, 'live-projects')}>Live Projects</a>
-          <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Projects</a>
-          <a href="#experience" onClick={(e) => handleNavClick(e, 'experience')}>Experience</a>
-          <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a>
-        </div> */}
+        
         <div className="social-links">
           <a href="https://github.com/khanabdullah10" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">

@@ -85,8 +85,14 @@
 }
 
 body.light-mode .fact-card {
-  background: var(--card-light);
-  border: 1px solid var(--border-light);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .fact-card:hover {
+  box-shadow: 0 8px 24px rgba(14, 165, 164, 0.15);
+  border-color: var(--accent-teal);
 }
 
 .fact-card:hover {
