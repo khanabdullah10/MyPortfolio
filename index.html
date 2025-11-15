@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khan Abdullah — Java Backend Developer & A Software Trainer</title>
+    <meta name="description"
+        content="Passionate backend developer specializing in Java and Spring Boot. Building efficient RESTful services and backend systems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="js/script.js"></script> -->
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">KA</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi — I'm <span class="gradient-text">Khan Abdullah</span>, a Java Backend Developer.</h1>
+                <p>I build efficient RESTful services & backend systems using Java, Spring Boot, Hibernate/Servlet and
+                    relational/NoSQL databases.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="mailto:khanabdulla7862@gmail.com" class="btn btn-secondary">Contact Me</a>
+                    <a href="#" class="btn btn-secondary"
+                        onclick="alert('Please add your resume PDF to download'); return false;">Download Resume</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/khanabdullah10" target="_blank" aria-label="GitHub">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/khan-abdullah-05b593213/" target="_blank"
+                        aria-label="LinkedIn">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="avatar-container">
+                    <img src="https://github.com/khanabdullah10.png" alt="Khan Abdullah" class="avatar">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p> I am a Graduate Engineer with a B.Tech in Computer Science Engineering and, by passion, a dedicated
+                Java developer. My journey in software development is driven by curiosity, consistency, and a strong
+                interest in building robust, scalable, and high-performance backend systems. </p>
+                <p> I have previously worked as a Java Developer at <strong>Chetu India Pvt. Ltd.</strong>, a US-based
+                    multinational company, where I contributed to a large-scale gaming (casino spinning) platform. I was
+                    responsible for modernizing the legacy application stack by migrating it from
+                    <strong>Struts</strong> to <strong>Spring MVC</strong> using <strong>JSP</strong> and <strong>SQL
+                        Server</strong>. I <strong>single-handedly handled the complete migration</strong> of the admin
+                    panel, including refactoring legacy code, redesigning controllers and views, optimizing database
+                    interactions, and significantly improving overall system performance and maintainability. </p>
+                <p> Currently,  I'm working as a <strong>Software Trainer at Itech Computer
+                    Education</strong>, where I teach programming fundamentals and assist students in building a
+                strong foundation in software development and modern technologies. </p>
+                <p> I am continuously learning and evolving, with a strong focus on <strong>Spring Boot
+                    microservices</strong>, distributed systems, and backend performance optimization. My
+                development approach emphasizes <strong>testability, documentation, and continuous
+                    improvement</strong> through hands-on experience and continuous learning. </p>
+                
+            </div>
+            <div class="quick-facts">
+                <div class="fact-card">
+                    <h3>Location</h3>
+                    <p>📍 Mumbai, Maharashtra</p>
+                </div>
+                <div class="fact-card">
+                    <h3>Education</h3>
+                    <p>🎓 B.Tech in CSE</p>
+                </div>
+                <div class="fact-card">
+                    <h3>Current Role</h3>
+                    <p> 💼Software Trainer @Itech Computer Education</p>
+                    <p> 💼Full stack Web developer @Mello Health</p>
+                </div>
+                <div class="fact-card">
+                    <h3>Focus</h3>
+                    <p>🚀 Spring Boot & Microservices,React and Angular</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="fade-in">
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Backend Development</h3>
+                <ul class="skill-list">
+                    <li>Core Java & Java 8+</li>
+                    <li>Spring Boot</li>
+                    <li>Spring MVC</li>
+                    <li>RESTful APIs</li>
+                    <li>Hibernate ORM</li>
+                    <li>Spring JDBC</li>
+                    <li>Struts2 Framework</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Databases</h3>
+                <ul class="skill-list">
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>Database Design</li>
+                    <li>SQL Optimization</li>
+                    <li>Stored Procedures</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Technologies</h3>
+                <ul class="skill-list">
+                    <li>Git & GitHub</li>
+                    <li>Postman</li>
+                    <li>Maven</li>
+                    <li>IntelliJ IDEA</li>
+                    <li>VS Code</li>
+                    <li>API Gateway</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Languages & Concepts</h3>
+                <ul class="skill-list">
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>C#</li>
+                    <li>JavaScript</li>
+                    <li>HTML5 & CSS3</li>
+                    <li>OOP Principles</li>
+                    <li>Design Patterns</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="java">Java</button>
+            <button class="filter-btn" data-filter="spring">Spring</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-category="java spring">
+                <h3>MinorProjects</h3>
+                <p>Collection of Java backend projects demonstrating proficiency in Hibernate ORM, JDBC API integration,
+                    and Spring Framework fundamentals with database connectivity.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">Hibernate</span>
+                    <span class="tech-badge">JDBC</span>
+                    <span class="tech-badge">Spring</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/khanabdullah10/MinorProjects" target="_blank" class="repo-link">View
+                        Repository</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="java spring web">
+                <h3>RapidApp</h3>
+                <p>Full-stack Spring-based web applications featuring CRUD operations, Thymeleaf templating engine for
+                    dynamic views, and Spring MVC architecture for clean separation of concerns.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Spring Boot</span>
+                    <span class="tech-badge">Thymeleaf</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">HTML</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/khanabdullah10/RapidApp" target="_blank" class="repo-link">View
+                        Repository</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="java spring">
+                <h3>RestApi Project</h3>
+                <p>Production-ready RESTful backend API with comprehensive CRUD operations for resource management.
+                    Implements proper HTTP methods, status codes, and JSON response handling.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">Spring Boot</span>
+                    <span class="tech-badge">REST API</span>
+                    <span class="tech-badge">Postman</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/khanabdullah10/RestApi" target="_blank" class="repo-link">View
+                        Repository</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="java">
+                <h3>JavaFromScratch</h3>
+                <p>Comprehensive Java learning repository covering core fundamentals to advanced topics including
+                    Collections, Streams, Multithreading, and Design Patterns with practical examples.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">OOP</span>
+                    <span class="tech-badge">DSA</span>
+                    <span class="tech-badge">Algorithms</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/khanabdullah10/JavaFromScratch" target="_blank" class="repo-link">View
+                        Repository</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="python">
+                <h3>4th Year Projects</h3>
+                <p>Final year academic projects including WhatsApp Chat Analyzer for data insights, Blockchain-based
+                    Voting Application for secure elections, and Netflix Clone implementation.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Blockchain</span>
+                    <span class="tech-badge">Data Analysis</span>
+                    <span class="tech-badge">Flask</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/khanabdullah10/4th-Year-Projects" target="_blank" class="repo-link">View
+                        Repository</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="java spring">
+                <h3>Product Management System</h3>
+                <p>Enterprise-grade web application with complete CRUD functionality for product lifecycle management.
+                    Built with Spring Boot, MySQL backend, and Thymeleaf for dynamic UI rendering.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Spring Boot</span>
+                    <span class="tech-badge">Spring MVC</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">Thymeleaf</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/khanabdullah10" target="_blank" class="repo-link">View Repository</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="fade-in">
+        <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+        <div class="timeline">
+
+
+
+
+            <div class="timeline-item">
+                <h3>Software Trainer</h3>
+                <p class="position">Itech Computer Education</p>
+                <p class="date">Sep 2025 –  Present | Mumbai, Maharashtra</p>
+                <ul>
+                    <li>Teaching undergraduate Degree and Diploma students (BCA, BSc IT/CS, DIT, etc.) and preparing them for industry-driven IT roles.</li>
+                    <li>Training students in core programming fundamentals including Java, Python, C++, C#, SQL, Data Structures, and OOPs.</li>
+                    <li>Guiding learners through advanced technologies such as Spring Boot, Hibernate, JDBC, RESTful APIs, Git/GitHub, and web development basics.</li>
+                    <li>Supporting students in developing strong problem-solving skills and building real-world projects aligned with industry standards.</li>
+                    <li>Mentoring learners for internship and job readiness through hands-on assignments, coding practices, and project evaluations.</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>Full Stack Web Developer</h3>
+                <p class="position">Mello Health</p>
+                <p class="date">Aug 2025 – Present | Remote</p>
+                <ul>
+                    <li>Developed a complete end-to-end web application for Mello Health, a platform that enables patients to book blood tests and connect directly with diagnostic vendors.</li>
+                    <li>Built the full system from scratch and deployed it successfully to production.</li>
+                    <li>Designed and implemented responsive, user-friendly interfaces using HTML, CSS, JavaScript, and modern UI practices.</li>
+                    <li>Created secure and scalable backend services using Java/Spring Boot (or your backend stack — tell me if you want to specify) with RESTful APIs for booking management, vendor integration, and patient communication.</li>
+                    <li>Integrated real-time vendor notifications and booking status updates to streamline the patient–vendor workflow.</li>
+                    <li>Optimized performance, ensured mobile compatibility, and maintained high availability for a live production environment.</li>
+                    <li>Collaborated with stakeholders to refine requirements and continuously enhance the platform based on user feedback.</li>
+                </ul>
+            </div>
+            
+
+            <div class="timeline-item">
+                <h3>Java Developer</h3>
+                <p class="position">CHETU INDIA Pvt Ltd</p>
+                <p class="date">Nov 2024 –Aug 2025 | Noida</p>
+                <ul>
+                    <li>Leading migration of legacy Struts2 admin panel to modern Spring Boot architecture</li>
+                    <li>Converted 30+ Struts2 action classes to Spring MVC controllers with Hibernate ORM</li>
+                    <li>Migrated 50+ MySQL stored procedures using JdbcTemplate and SimpleJdbcCall</li>
+                    <li>Reduced codebase volume by 25% through Lombok and annotation-driven configuration</li>
+                    <li>Optimized database connectivity and implemented transaction management</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Java Developer Trainee</h3>
+                <p class="position">Chetu Skill Center</p>
+                <p class="date">Aug 2024 – Oct 2025 | Noida</p>
+                <ul>
+                    <li>Architected and deployed RESTful APIs using Spring MVC</li>
+                    <li>Designed API testing workflows with Postman collections</li>
+                    <li>Conducted end-to-end API testing ensuring reliability and scalability</li>
+                    <li>Configured API Gateway for secure service integration</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Bachelor of Technology in Computer Science</h3>
+                <p class="position">Sunder Deep College of Engineering</p>
+                <p class="date">Dec 2020 – June 2024 | Ghaziabad</p>
+                <ul>
+                    <li>Specialized in Software Engineering and Backend Development</li>
+                    <li>Secured 1st position at inter-college coding competition</li>
+                    <li>Honored as MR. FRESHER and MR. FAREWELL during engineering tenure</li>
+                    <li>Completed NASSCOM certification on Fundamentals of Data Analytics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <div class="contact-content">
+            <div class="contact-form">
+                <form action="mailto:khanabdulla7862@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <p>Or reach out directly at <a href="mailto:khanabdulla7862@gmail.com">khanabdulla7862@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-links" style="justify-content: center; margin-bottom: 1.5rem;">
+                <a href="https://github.com/khanabdullah10" target="_blank" aria-label="GitHub">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/khan-abdullah-05b593213/" target="_blank" aria-label="LinkedIn">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+            </div>
+            <p>&copy; 2025 Khan Abdullah. All rights reserved. Built with passion for clean code.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

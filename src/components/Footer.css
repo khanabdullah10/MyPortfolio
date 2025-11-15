@@ -1,0 +1,127 @@
+footer {
+  background: var(--card-dark);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border-dark);
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+  animation: slideInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+body.light-mode footer {
+  background: var(--card-light);
+  border-top: 1px solid var(--border-light);
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-links a:hover {
+  color: var(--accent-teal);
+}
+
+.social-links {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 50%;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+body.light-mode .social-links a {
+  background: var(--card-light);
+  border: 1px solid var(--border-light);
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+  color: white;
+  border-color: transparent;
+}
+
+footer p {
+  opacity: 0.7;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .footer-links {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .social-links {
+    gap: 0.6rem;
+  }
+
+  .social-links a {
+    width: 36px;
+    height: 36px;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+

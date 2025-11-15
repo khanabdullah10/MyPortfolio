@@ -1,0 +1,110 @@
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  background: var(--card-dark);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-dark);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.8s ease forwards, glow 3s ease-in-out infinite;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+body.light-mode .contact-form {
+  background: var(--card-light);
+  border: 1px solid var(--border-light);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  animation: slideInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.form-group:nth-child(1) input { animation-delay: 0.3s; }
+.form-group:nth-child(2) input { animation-delay: 0.4s; }
+.form-group:nth-child(3) textarea { animation-delay: 0.5s; }
+
+.form-group button {
+  animation: slideInUp 0.5s ease forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 0 3px rgba(14, 165, 164, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  padding: 2rem;
+  background: var(--card-dark);
+  border-radius: 15px;
+  border: 1px solid var(--border-dark);
+}
+
+body.light-mode .contact-info {
+  background: var(--card-light);
+  border: 1px solid var(--border-light);
+}
+
+.contact-info a {
+  color: var(--accent-teal);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  color: var(--accent-purple);
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 2rem;
+  }
+}
+
