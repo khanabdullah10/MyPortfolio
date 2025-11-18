@@ -6,7 +6,10 @@ const Navbar = ({ theme, toggleTheme, isMenuOpen, setIsMenuOpen }) => {
     e.preventDefault();
     const element = document.getElementById(targetId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const navbar = document.getElementById('navbar');
+      const offset = navbar ? navbar.offsetHeight : 0;
+      const top = element.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
     setIsMenuOpen(false);
   };

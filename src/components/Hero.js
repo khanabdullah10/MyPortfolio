@@ -74,7 +74,7 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-content">
-        <div className="hero-text">
+        <div className={`hero-text ${(!isDeleting && currentIndex < fullText.length) ? 'typing-bounce' : ''}`}>
           <h1>
             {renderText()}
             <span className="typewriter-cursor">|</span>
@@ -91,9 +91,9 @@ const Hero = () => {
               Contact Me
             </a>
             <a 
-              href="/khanAbdullah_Resume.pdf" 
+              href="/assets/khanAbdullah_Resume2025.pdf" 
               className="btn btn-secondary"
-              download="khanAbdullah_Resume.pdf"
+              download="Khan_Abdullah_Resume_2025.pdf"
             >
               Download Resume
             </a>

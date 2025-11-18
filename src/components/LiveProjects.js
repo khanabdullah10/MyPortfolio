@@ -69,7 +69,7 @@ const LiveProjects = () => {
       title: 'Casino Game Admin Panel',
       description: 'A comprehensive admin panel for managing casino gaming operations. Built with Spring Boot, featuring real-time analytics, user management, game configuration, and transaction monitoring.',
       url: 'https://uat.chancesgames.com:9090/jarolAdmin',
-      tech: ['Spring Boot', 'Spring MVC', 'JSP', 'SQL Server', 'Hibernate'],
+      tech: ['Spring Boot', 'Spring MVC', 'JSP', 'SQL Server', 'Hibernate','Azure DataBase','AWS'],
       features: [
         'Real-time analytics dashboard',
         'User and game management',
@@ -82,7 +82,7 @@ const LiveProjects = () => {
       title: 'Mello Health - Lab to Door',
       description: 'A complete healthcare platform enabling patients to book blood tests and connect with diagnostic vendors. Full-stack application with booking management, vendor integration, and real-time notifications.',
       url: 'https://mellohealth.in/',
-      tech: ['React', 'Spring Boot', 'RESTful APIs', 'MySQL', 'JavaScript'],
+      tech: ['HTML','CSS','JavaScript','Netlify','GoDaddy'],
       features: [
         'Blood test booking system',
         'Vendor integration',

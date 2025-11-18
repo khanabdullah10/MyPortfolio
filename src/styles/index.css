@@ -338,6 +338,23 @@ body.light-mode .section-subtitle {
   color: #475569;
 }
 
+section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  position: relative;
+  z-index: 1;
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  section { padding: 3rem 1rem; }
+}
+@media (max-width: 480px) {
+  section { padding: 2rem 1rem; }
+  .section-title { font-size: 1.7rem; }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .section-title {

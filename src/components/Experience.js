@@ -84,20 +84,6 @@ const Experience = () => {
       ]
     },
     {
-      title: 'Full Stack Web Developer',
-      position: 'Mello Health',
-      date: 'Aug 2025 – Present | Remote',
-      points: [
-        'Developed a complete end-to-end web application for Mello Health, a platform that enables patients to book blood tests and connect directly with diagnostic vendors.',
-        'Built the full system from scratch and deployed it successfully to production.',
-        'Designed and implemented responsive, user-friendly interfaces using HTML, CSS, JavaScript, and modern UI practices.',
-        'Created secure and scalable backend services using Java/Spring Boot with RESTful APIs for booking management, vendor integration, and patient communication.',
-        'Integrated real-time vendor notifications and booking status updates to streamline the patient–vendor workflow.',
-        'Optimized performance, ensured mobile compatibility, and maintained high availability for a live production environment.',
-        'Collaborated with stakeholders to refine requirements and continuously enhance the platform based on user feedback.'
-      ]
-    },
-    {
       title: 'Java Developer',
       position: 'CHETU INDIA Pvt Ltd',
       date: 'Nov 2024 – Aug 2025 | Noida',
@@ -112,7 +98,7 @@ const Experience = () => {
     {
       title: 'Java Developer Trainee',
       position: 'Chetu Skill Center',
-      date: 'Aug 2024 – Oct 2025 | Noida',
+      date: 'Jun 2024 – Oct 2024 | Noida',
       points: [
         'Architected and deployed RESTful APIs using Spring MVC',
         'Designed API testing workflows with Postman collections',
@@ -120,6 +106,24 @@ const Experience = () => {
         'Configured API Gateway for secure service integration'
       ]
     },
+
+    {
+      title: 'Full Stack Web Developer',
+      position: 'Mello Health',
+      date: 'Feb 2024 - May 2024 | Remote',
+      points: [
+        'Developed a complete end-to-end web application for Mello Health, a platform that enables patients to book blood tests and connect directly with diagnostic vendors.',
+        'Built the full system from scratch and deployed it successfully to production.',
+        'Designed and implemented responsive, user-friendly interfaces using HTML, CSS, JavaScript, and modern UI practices.',
+        'Created secure and scalable backend services using Java/Spring Boot with RESTful APIs for booking management, vendor integration, and patient communication.',
+        'Integrated real-time vendor notifications and booking status updates to streamline the patient–vendor workflow.',
+        'Optimized performance, ensured mobile compatibility, and maintained high availability for a live production environment.',
+        'Collaborated with stakeholders to refine requirements and continuously enhance the platform based on user feedback.'
+      ]
+    },
+
+
+
     {
       title: 'Bachelor of Technology in Computer Science',
       position: 'Sunder Deep College of Engineering',
