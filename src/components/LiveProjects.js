@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './LiveProjects.css';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, isMobile }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(!isMobile);
+
+  useEffect(() => {
+    setIsExpanded(!isMobile);
+  }, [isMobile]);
 
   return (
     <div className="live-project-card">
@@ -31,22 +36,37 @@ const ProjectCard = ({ project }) => {
       </div>
       <div className="project-content">
         <h3>{project.title}</h3>
-        <p className="project-description">{project.description}</p>
-        
-        <div className="project-features">
-          <h4>Key Features:</h4>
-          <ul>
-            {project.features.map((feature, idx) => (
-              <li key={idx}>{feature}</li>
-            ))}
-          </ul>
-        </div>
+        {(!isMobile || isExpanded) && (
+          <>
+            <p className="project-description">{project.description}</p>
+            
+            <div className="project-features">
+              <h4>Key Features:</h4>
+              <ul>
+                {project.features.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
+                ))}
+              </ul>
+            </div>
 
-        <div className="tech-stack">
-          {project.tech.map((tech, techIndex) => (
-            <span key={techIndex} className="tech-badge">{tech}</span>
-          ))}
-        </div>
+            <div className="tech-stack">
+              {project.tech.map((tech, techIndex) => (
+                <span key={techIndex} className="tech-badge">{tech}</span>
+              ))}
+            </div>
+          </>
+        )}
+
+        {isMobile && (
+          <button 
+            type="button" 
+            className="project-toggle" 
+            onClick={() => setIsExpanded(prev => !prev)}
+            aria-expanded={isExpanded}
+          >
+            {isExpanded ? 'Hide details' : 'Show details'}
+          </button>
+        )}
 
         <div className="project-actions">
           <a 
@@ -64,6 +84,20 @@ const ProjectCard = ({ project }) => {
 };
 
 const LiveProjects = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth <= 768);
+      }
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const liveProjects = [
     {
       title: 'Casino Game Admin Panel',
@@ -101,7 +135,7 @@ const LiveProjects = () => {
       
       <div className="live-projects-grid">
         {liveProjects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard key={index} project={project} isMobile={isMobile} />
         ))}
       </div>
     </section>

@@ -307,16 +307,17 @@ body.light-mode .btn-secondary:hover {
 section {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 5rem 2rem;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 4vw, 2.5rem);
   position: relative;
   z-index: 1;
+  scroll-margin-top: clamp(64px, 10vw, 96px);
 }
 
 .section-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
   text-align: center;
   animation: slideInUp 0.8s ease forwards, wave 3s ease-in-out infinite;
   opacity: 0;
@@ -325,9 +326,9 @@ section {
 
 .section-subtitle {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
   opacity: 0.8;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -338,31 +339,14 @@ body.light-mode .section-subtitle {
   color: #475569;
 }
 
-section {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 5rem 2rem;
-  position: relative;
-  z-index: 1;
-  scroll-margin-top: 80px;
-}
-
-@media (max-width: 768px) {
-  section { padding: 3rem 1rem; }
-}
-@media (max-width: 480px) {
-  section { padding: 2rem 1rem; }
-  .section-title { font-size: 1.7rem; }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
+@media (max-width: 600px) {
+  body {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
-  .section-subtitle {
-    font-size: 1rem;
+  p, li {
+    font-size: 0.95rem;
   }
 }
 

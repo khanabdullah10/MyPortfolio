@@ -291,6 +291,30 @@ body.light-mode .tech-badge:hover {
   text-align: center;
 }
 
+.project-toggle {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-dark);
+  background: transparent;
+  color: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.light-mode .project-toggle {
+  border: 1px solid var(--border-light);
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-toggle:hover {
+  border-color: var(--accent-teal);
+  color: var(--accent-teal);
+}
+
 @keyframes floatSmooth {
   0% {
     transform: translateY(0px) translateX(0px) rotate(0deg);

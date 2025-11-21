@@ -4,8 +4,27 @@ import './LoadingScreen.css';
 const LoadingScreen = () => {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth <= 768);
+      }
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) {
+      setLoading(false);
+      setProgress(100);
+      return undefined;
+    }
+
     const interval = setInterval(() => {
       setProgress(prev => {
         if (prev >= 100) {
@@ -18,7 +37,7 @@ const LoadingScreen = () => {
     }, 30);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isMobile]);
 
   if (!loading) return null;
 
