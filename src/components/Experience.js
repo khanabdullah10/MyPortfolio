@@ -72,21 +72,9 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: 'Software Trainer',
-      position: 'Itech Computer Education',
-      date: 'Sep 2025 – Present | Mumbai, Maharashtra',
-      points: [
-        'Teaching undergraduate Degree and Diploma students (BCA, BSc IT/CS, DIT, etc.) and preparing them for industry-driven IT roles.',
-        'Training students in core programming fundamentals including Java, Python, C++, C#, SQL, Data Structures, and OOPs.',
-        'Guiding learners through advanced technologies such as Spring Boot, Hibernate, JDBC, RESTful APIs, Git/GitHub, and web development basics.',
-        'Supporting students in developing strong problem-solving skills and building real-world projects aligned with industry standards.',
-        'Mentoring learners for internship and job readiness through hands-on assignments, coding practices, and project evaluations.'
-      ]
-    },
-    {
       title: 'Java Developer',
       position: 'CHETU INDIA Pvt Ltd',
-      date: 'Nov 2024 – Aug 2025 | Noida',
+      date: 'Feb 2024 – Sep 2025 | Noida',
       points: [
         'Leading migration of legacy Struts2 admin panel to modern Spring Boot architecture',
         'Converted 30+ Struts2 action classes to Spring MVC controllers with Hibernate ORM',
@@ -95,22 +83,11 @@ const Experience = () => {
         'Optimized database connectivity and implemented transaction management'
       ]
     },
-    {
-      title: 'Java Developer Trainee',
-      position: 'Chetu Skill Center',
-      date: 'Jun 2024 – Oct 2024 | Noida',
-      points: [
-        'Architected and deployed RESTful APIs using Spring MVC',
-        'Designed API testing workflows with Postman collections',
-        'Conducted end-to-end API testing ensuring reliability and scalability',
-        'Configured API Gateway for secure service integration'
-      ]
-    },
 
     {
       title: 'Full Stack Web Developer',
       position: 'Mello Health',
-      date: 'Feb 2024 - May 2024 | Remote',
+      date: 'May 2024 | Remote',
       points: [
         'Developed a complete end-to-end web application for Mello Health, a platform that enables patients to book blood tests and connect directly with diagnostic vendors.',
         'Built the full system from scratch and deployed it successfully to production.',
