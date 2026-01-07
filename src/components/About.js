@@ -44,8 +44,7 @@ const About = () => {
           </div>
           <div className="fact-card">
             <h3>Current Role</h3>
-            <p>💼 Software Trainer<span className="at-symbol">@</span>Itech Computer Ed.</p>
-            <p>💼 Web developer<span className="at-symbol">@</span>Mello Health.</p>
+            <p>💼 Java Developer<span className="at-symbol">@</span>Chetu.</p>
           </div>
           <div className="fact-card">
             <h3>Focus</h3>
