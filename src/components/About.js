@@ -22,11 +22,6 @@ const About = () => {
             interactions, and significantly improving overall system performance and maintainability.
           </p>
           <p>
-            Currently, I'm working as a <strong>Software Trainer at Itech Computer
-              Education</strong>, where I teach programming fundamentals and assist students in building a
-            strong foundation in software development and modern technologies.
-          </p>
-          <p>
             I am continuously learning and evolving, with a strong focus on <strong>Spring Boot
               microservices</strong>, distributed systems, and backend performance optimization. My
             development approach emphasizes <strong>testability, documentation, and continuous
